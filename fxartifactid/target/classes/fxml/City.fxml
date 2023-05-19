@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:id="DepartmentControllerPane" fx:controller="controller.CityController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="btnTrans" layoutX="421.0" layoutY="87.0" mnemonicParsing="false" text="编码" onAction="#btnClick" />
+      <Button fx:id="btnJieMa" layoutX="421.0" layoutY="117.0" mnemonicParsing="false" text="解码" onAction="#funcDecode" />
+      <Button fx:id="btnClose" layoutX="421.0" layoutY="147.0" mnemonicParsing="false" text="关闭" onAction="#Close" />
+      <TextArea fx:id="tArea" layoutX="100.0" layoutY="138.0" prefHeight="100.0" prefWidth="200.0" />
+      <TextArea fx:id="tArea2" layoutX="100.0" layoutY="248.0" prefHeight="100.0" prefWidth="200.0" />
+      <TextField fx:id="tField" layoutX="120.0" layoutY="76.0" />
+   </children>
+</Pane>

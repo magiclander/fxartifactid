@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_fxartifactid" default="compile.module.fxartifactid">
+  <dirname property="module.fxartifactid.basedir" file="${ant.file.module_fxartifactid}"/>
+  
+  <property name="module.jdk.home.fxartifactid" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.fxartifactid" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.fxartifactid" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.fxartifactid" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="fxartifactid.output.dir" value="${module.fxartifactid.basedir}/target/classes"/>
+  <property name="fxartifactid.testoutput.dir" value="${module.fxartifactid.basedir}/target/test-classes"/>
+  
+  <path id="fxartifactid.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="fxartifactid.module.production.classpath">
+    <path refid="${module.jdk.classpath.fxartifactid}"/>
+    <pathelement location="${basedir}/../../maven/mysql-connector-java-5.1.40-bin.jar"/>
+    <path refid="library.maven:_org.openjfx:javafx-controls:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-controls:win:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-graphics:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-graphics:win:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-base:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-base:win:11.0.2.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.1.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.9.classpath"/>
+    <path refid="library.maven:_org.jsoup:jsoup:1.15.4.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis:3.5.5.classpath"/>
+  </path>
+  
+  <path id="fxartifactid.runtime.production.module.classpath">
+    <pathelement location="${fxartifactid.output.dir}"/>
+    <pathelement location="${basedir}/../../maven/mysql-connector-java-5.1.40-bin.jar"/>
+    <path refid="library.maven:_org.openjfx:javafx-controls:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-controls:win:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-graphics:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-graphics:win:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-base:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-base:win:11.0.2.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.1.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.9.classpath"/>
+    <path refid="library.maven:_org.jsoup:jsoup:1.15.4.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis:3.5.5.classpath"/>
+  </path>
+  
+  <path id="fxartifactid.module.classpath">
+    <path refid="${module.jdk.classpath.fxartifactid}"/>
+    <pathelement location="${fxartifactid.output.dir}"/>
+    <pathelement location="${basedir}/../../maven/mysql-connector-java-5.1.40-bin.jar"/>
+    <path refid="library.maven:_org.openjfx:javafx-controls:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-controls:win:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-graphics:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-graphics:win:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-base:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-base:win:11.0.2.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.1.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.9.classpath"/>
+    <path refid="library.maven:_org.jsoup:jsoup:1.15.4.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis:3.5.5.classpath"/>
+    <path refid="library.maven:_junit:junit:4.12.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+  </path>
+  
+  <path id="fxartifactid.runtime.module.classpath">
+    <pathelement location="${fxartifactid.testoutput.dir}"/>
+    <pathelement location="${fxartifactid.output.dir}"/>
+    <pathelement location="${basedir}/../../maven/mysql-connector-java-5.1.40-bin.jar"/>
+    <path refid="library.maven:_org.openjfx:javafx-controls:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-controls:win:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-graphics:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-graphics:win:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-base:11.0.2.classpath"/>
+    <path refid="library.maven:_org.openjfx:javafx-base:win:11.0.2.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpclient:4.5.classpath"/>
+    <path refid="library.maven:_org.apache.httpcomponents:httpcore:4.4.1.classpath"/>
+    <path refid="library.maven:_commons-logging:commons-logging:1.2.classpath"/>
+    <path refid="library.maven:_commons-codec:commons-codec:1.9.classpath"/>
+    <path refid="library.maven:_org.jsoup:jsoup:1.15.4.classpath"/>
+    <path refid="library.maven:_org.mybatis:mybatis:3.5.5.classpath"/>
+    <path refid="library.maven:_junit:junit:4.12.classpath"/>
+    <path refid="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.fxartifactid">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.fxartifactid">
+    <patternset refid="excluded.from.module.fxartifactid"/>
+  </patternset>
+  
+  <path id="fxartifactid.module.sourcepath">
+    <dirset dir="${module.fxartifactid.basedir}">
+      <include name="src/main/java"/>
+      <include name="src/main/resources"/>
+    </dirset>
+  </path>
+  
+  <path id="fxartifactid.module.test.sourcepath">
+    <dirset dir="${module.fxartifactid.basedir}">
+      <include name="src/test/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.fxartifactid" depends="compile.module.fxartifactid.production,compile.module.fxartifactid.tests" description="Compile module fxartifactid"/>
+  
+  <target name="compile.module.fxartifactid.production" depends="register.custom.compilers" description="Compile module fxartifactid; production classes">
+    <mkdir dir="${fxartifactid.output.dir}"/>
+    <javac2 destdir="${fxartifactid.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.fxartifactid}/javac">
+      <compilerarg line="${compiler.args.fxartifactid}"/>
+      <bootclasspath refid="fxartifactid.module.bootclasspath"/>
+      <classpath refid="fxartifactid.module.production.classpath"/>
+      <src refid="fxartifactid.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.fxartifactid"/>
+    </javac2>
+    
+    <copy todir="${fxartifactid.output.dir}">
+      <fileset dir="${module.fxartifactid.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.fxartifactid.basedir}/src/main/resources">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.fxartifactid.tests" depends="register.custom.compilers,compile.module.fxartifactid.production" description="compile module fxartifactid; test classes" unless="skip.tests">
+    <mkdir dir="${fxartifactid.testoutput.dir}"/>
+    <javac2 destdir="${fxartifactid.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.fxartifactid}/javac">
+      <compilerarg line="${compiler.args.fxartifactid}"/>
+      <bootclasspath refid="fxartifactid.module.bootclasspath"/>
+      <classpath refid="fxartifactid.module.classpath"/>
+      <src refid="fxartifactid.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.fxartifactid"/>
+    </javac2>
+    
+    <copy todir="${fxartifactid.testoutput.dir}">
+      <fileset dir="${module.fxartifactid.basedir}/src/test/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.fxartifactid" description="cleanup module">
+    <delete dir="${fxartifactid.output.dir}"/>
+    <delete dir="${fxartifactid.testoutput.dir}"/>
+  </target>
+</project>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:controller="controller.baseController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+      xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" stylesheets="/css/test.css">
+   <children>
+      <MenuBar layoutX="0.0" layoutY="2.0" prefHeight="25.0" prefWidth="600.0" >
+        <menus>
+          <Menu mnemonicParsing="false" text="设置">
+            <items>
+                   <MenuItem mnemonicParsing="false" text="访问网站" onAction="#closeFrom"/>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                <MenuItem onAction="#loadf01" text="调用F01窗体"></MenuItem>
+                <MenuItem mnemonicParsing="false" text="CITY" onAction="#loadFormCity"/>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+
+
+   </children>
+</Pane>
