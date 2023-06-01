@@ -17,9 +17,11 @@ public class Main extends Application {
     }
 }
 ```
-````fxml file ==>>f01.fxml
+###fxml file ==>>f01.fxml
+···
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <GridPane fx:controller="sample.Controller"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
 </GridPane>
+···
